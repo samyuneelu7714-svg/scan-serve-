@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🍽 Scan & Serve</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Barcode Library -->
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+
+<!-- QR Code Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🍽 Scan & Serve</h1>
+
+<input
+type="text"
+id="foodName"
+placeholder="Enter Recipe Name (Example: mango)">
+
+<br><br>
+
+<button onclick="generateBarcode()">
+Generate Barcode
+</button>
+
+<button onclick="generateQR()">
+Generate QR Code
+</button>
+
+<h2>Barcode</h2>
+
+<svg id="barcode"></svg>
+
+<button onclick="downloadBarcode()">
+Download Barcode
+</button>
+
+<h2>QR Code</h2>
+
+<div id="qrcode"></div>
+
+<button onclick="downloadQR()">
+Download QR Code
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
