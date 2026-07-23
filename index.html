@@ -1,57 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan & Serve</title>
 
-<title>🍽 Scan & Serve</title>
+    <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="style.css">
-
-<!-- Barcode Library -->
-<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
-
-<!-- QR Code Library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>🍽 Scan & Serve</h1>
+    <h1>🍓 Scan & Serve</h1>
 
-<input
-type="text"
-id="foodName"
-placeholder="Enter Recipe Name (Example: mango)">
+    <p>Scan, Learn and Serve with Love ❤️</p>
 
-<br><br>
+    <input
+        type="text"
+        id="foodName"
+        placeholder="Enter Mango, Apple or Banana">
 
-<button onclick="generateBarcode()">
-Generate Barcode
-</button>
+    <br><br>
 
-<button onclick="generateQR()">
-Generate QR Code
-</button>
+    <button onclick="generateBarcode()">
+        Generate Barcode
+    </button>
 
-<h2>Barcode</h2>
+    <button onclick="generateQR()">
+        Generate QR Code
+    </button>
 
-<svg id="barcode"></svg>
+    <div class="box">
 
-<button onclick="downloadBarcode()">
-Download Barcode
-</button>
+        <h2>Barcode</h2>
 
-<h2>QR Code</h2>
+        <svg id="barcode"></svg>
 
-<div id="qrcode"></div>
+    </div>
 
-<button onclick="downloadQR()">
-Download QR Code
-</button>
+    <div class="box">
+
+        <h2>QR Code</h2>
+
+        <div id="qrcode"></div>
+
+    </div>
 
 </div>
 

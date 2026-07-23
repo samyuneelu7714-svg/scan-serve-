@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Scan & Serve Recipe</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="recipe-card">
+
+<h1 id="title"></h1>
+
+<img id="fruitImage" class="recipe-img">
+
+<h2>Ingredients</h2>
+
+<ul id="ingredients"></ul>
+
+<h2>Instructions</h2>
+
+<p id="instructions"></p>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const fruit = params.get("fruit");
+
+const recipes = {
+
+mango:{
+
+title:"🥭 Mango Juice",
+
+image:"images/mango.jpg",
+
+ingredients:[
+"2 Ripe Mangoes",
+"1 Cup Milk",
+"2 tbsp Sugar",
+"Ice Cubes"
+],
+
+instructions:
+"Blend all ingredients until smooth. Pour into a glass and serve chilled."
+
+},
+
+apple:{
+
+title:"🍎 Apple Juice",
+
+image:"images/apple.jpg",
+
+ingredients:[
+"2 Apples",
+"1 Cup Water",
+"1 tbsp Sugar",
+"Ice Cubes"
+],
+
+instructions:
+"Blend apples with water. Strain if needed. Add sugar and serve chilled."
+
+},
+
+banana:{
+
+title:"🍌 Banana Shake",
+
+image:"images/banana.jpg",
+
+ingredients:[
+"2 Bananas",
+"1 Cup Milk",
+"2 tsp Sugar",
+"Ice Cubes"
+],
+
+instructions:
+"Blend bananas with milk and sugar. Serve immediately."
+
+}
+
+};
+
+if(recipes[fruit]){
+
+document.getElementById("title").innerHTML = recipes[fruit].title;
+
+document.getElementById("fruitImage").src = recipes[fruit].image;
+
+document.getElementById("fruitImage").alt = recipes[fruit].title;
+
+const list = document.getElementById("ingredients");
+
+recipes[fruit].ingredients.forEach(item=>{
+
+let li=document.createElement("li");
+
+li.textContent=item;
+
+list.appendChild(li);
+
+});
+
+document.getElementById("instructions").textContent =
+recipes[fruit].instructions;
+
+}else{
+
+document.body.innerHTML="<h1>Recipe Not Found</h1>";
+
+}
+
+</script>
+
+</body>
+
+</html>
