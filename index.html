@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,42 +8,37 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <!-- JsBarcode -->
     <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+
+    <!-- QR Code -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <h1>🍓 Scan & Serve</h1>
+        <h1>🍽️ Scan & Serve</h1>
 
-    <p>Scan, Learn and Serve with Love ❤️</p>
+        <p>Scan, Learn and Serve with Love ❤️</p>
 
-    <input
-        type="text"
-        id="foodName"
-        placeholder="Enter Mango, Apple or Banana">
+        <input
+            type="text"
+            id="foodName"
+            placeholder="Enter Mango, Apple, Banana or Oreo">
 
-    <br><br>
+        <br><br>
 
-    <button onclick="generateBarcode()">
-        Generate Barcode
-    </button>
+        <button onclick="generateCode()">Generate QR & Barcode</button>
 
-    <button onclick="generateQR()">
-        Generate QR Code
-    </button>
-
-    <div class="box">
+        <br><br>
 
         <h2>Barcode</h2>
 
         <svg id="barcode"></svg>
 
-    </div>
-
-    <div class="box">
+        <br><br>
 
         <h2>QR Code</h2>
 
@@ -50,9 +46,8 @@
 
     </div>
 
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
